@@ -1,0 +1,31 @@
+.custom_style_margin {
+    margin-top: 5px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 91vh;
+}
+
+#sidebar {
+    background: rgb(219, 211, 211);
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar:not(active) {
+    margin-left: -250px;
+}
+
+
+#sidebar.active {
+    margin-left: 0px;
+}
+
