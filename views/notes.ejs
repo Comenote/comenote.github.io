@@ -1,0 +1,14 @@
+<a class="card mb-3 mr-3 zoom hoverable custom_note">
+	<li>
+	<% if (user) { %>
+		<div class="card-header">
+				<button class="rounded-circle border-0 btn-danger btn-sm custom_position_btn"><i class="fas fa-trash-alt"></i></button>
+			<img src="../public/images/doit-quicentro-shopping-logo.png" alt="">
+		</div>
+			<div class="card-body" style="width: 12rem;">
+			<h2 class="card-title text-capitalize"><%= user.notetitle %></h2>
+			<p class="card-text"><%= user.notedescrip %></p>
+		</div>
+	<% } %>
+	</li>
+</a>

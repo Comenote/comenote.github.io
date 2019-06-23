@@ -1,0 +1,31 @@
+<div class="container-fluid">
+	<form action="/api/lists" class="col-md-4 col-xs-4 mx-auto mt-4" method="POST">
+			<% include ./partials/msg %>
+			<fieldset>
+					<legend class="text-light">Create your list hear.</legend>
+					<div class="form-group md-form">
+							<label for="listTitle" class="text-light">Enter list title</label>
+							<input type="text" class="form-control text-light" id="listTitle" name="listTitle" aria-describedby="listTitle">
+					</div>
+					
+			</fieldset>
+	</form>
+	<form class="col-md-4 col-xs-4 mx-auto">
+			<fieldset>
+					<legend class="text-light">Create your tasks hear.</legend>
+					<div class="form-group d-flex align-items-center md-form">
+							<input type="text" id="inputMDEx" class="form-control main-input text-light">
+							<label for="inputMDEx" class="text-light">Enter a task</label>
+							<button id="my" class="rounded-circle border-1 btn-primary ml-2"><i class="fas fa-plus"></i></button>
+					</div>
+					<div class="form-group">
+									<a href ="/dashboard" class="btn btn-outline-primary waves-effect submit text-light">Create</a>
+					</div>
+			</fieldset>    
+	</form>
+	<ul class="list col-md-4 col-xs-4 mx-auto">
+			
+	</ul>
+	</div>
+
+

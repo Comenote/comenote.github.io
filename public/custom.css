@@ -1,0 +1,71 @@
+body {
+	font-family: "Mali", "sans-serif";
+	width: 100%;
+}
+li{
+	list-style-type: none;
+}
+
+.wrapper {
+	display: flex;
+}
+
+#sidebar {
+	min-width: 250px;
+	max-width: 250px;
+	height: 100vh;
+	position: fixed;
+	background: rgb(219, 211, 211);
+	top: 0;
+	left: 0;
+	color: #fff;
+	transition: all 0.3s;
+	z-index: 9999;
+}
+
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 998;
+	opacity: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+.overlay.active {
+	display: block;
+	width: 100%;
+	opacity: 1;
+}
+
+#sidebar:not(active) {
+	margin-left: -250px;
+}
+
+
+#sidebar.active {
+	margin-left: 0;
+}
+
+#dismiss {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: 16px;
+	right: 7px;
+	align-content: center;
+}
+
+.custom_position_btn {
+	position: absolute;
+	right: -10px;
+	top: -10px;
+	display: none;
+}
+
+.custom_note:hover .custom_position_btn {
+	display: block;
+	transition: all 0.5s ease-in-out;
+}
