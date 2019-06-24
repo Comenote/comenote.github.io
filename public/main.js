@@ -16,8 +16,16 @@ $(document).ready(function() {
 			console.log($(".main-input").val());
 			let task = $(".main-input").val();
 			$(".main-input").val("");
-			$(".list").prepend(`<li><div class="border border-info rounded mt-1 col-sm-5 col-sm-10 task"><h6 class="mt-2 h5 task-text text-capitalize">${task}</h6></div><i class="done text-success  fas fa-check"></i><button class="btn btn-danger delete"><i class="fas fa-minus"></i></li>`)
-	});
+			$(".list").prepend(`<li class = "el_list d-flex"><div class="border border-info rounded mt-1 col-sm-5 col-sm-10 task"><h6 class="mt-2 h5 task-text text-capitalize">${task}</h6></div><button class="btn btn-outline-light btn-sm delete"><i class="fas fa-minus-square"></i></button></li>`)
+		deleteTask();
+		});
+
+	function deleteTask() {
+		$(".delete").click(function() {
+			$(this).parents(".el_list").remove();
+		})
+	}
+		
 	
 	$(".submit").on("click", function(){
 			let title = $("#listTitle").val();
