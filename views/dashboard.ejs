@@ -1,18 +1,14 @@
 <div class="container text-center">
-		<h1 class="text-light">Welcome </h1>
+	<h1 class="text-light">Welcome </h1>
 </div>
 <div class="container row ml-3 d-flex justify-content-center mx-auto">
-	<% notesArr.forEach(function(user){ %>
-		<%- include('notes', { user }); %>
-	<% }); %>
+
 </div>
 <div class="container text-center pb-2">
-		<h2 class="text-danger">Your Lists </h2>
+	<h2 class="text-danger">Your Lists </h2>
 </div>
 <div class="container row d-flex justify-content-center ml-3 mx-auto">
 	<% ListArr.forEach(function(user){ %>
 		<%- include('lists', { user }); %>
 	<% }); %>
 </div>
-
-

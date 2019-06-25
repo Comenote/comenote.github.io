@@ -80,7 +80,7 @@ app.use("/list", readList);
 app.use("/delete", deleteNote);
 app.use("/update", updateFile);
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT, (err) => {
     if(err){
         console.log("Something go wrong");

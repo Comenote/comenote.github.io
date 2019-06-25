@@ -11,4 +11,4 @@ const Lists = mongoose.model("Lists", {
 module.exports = Lists;
 module.exports.CreateLists = (listInfo,callback) =>{
     listInfo.save(callback);
-} ;
+};
