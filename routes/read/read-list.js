@@ -1,13 +1,14 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../../models/User");
 const Lists = require("../../models/List");
 const { ensureAuthenticated } = require("../../config/identify-check.js");
 
 router.get("/:id" ,ensureAuthenticated, (req,res) => {
-    Lists.find({_id: req.user._id})
+    const ListID = req.params.id;
+    console.log(ListID);
+    Lists.find({_id: ListID})
         .then(data => {
-            // console.log(data);
+            res.render("detailList", {arr: data[0]["list"], title: data[0]["title"]});
         })
         .catch(err => console.log(err))
 });

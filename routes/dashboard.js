@@ -10,7 +10,6 @@ router.get("/",ensureAuthenticated, async (req,res) => {
 			for(let i = 0; i < data.length; i++){
 				ListArr.push(data[i]);
 			}
-			console.log(ListArr);
 			return res.render("dashboard",{ListArr});
 		})
 		.catch(err => console.log(err));
