@@ -1,0 +1,25 @@
+<div class="container-fluid  mt-4">
+    <form action="/api/notes" class="col-md-4 col-xs-4 mx-auto" method="POST">
+        <% include ./partials/msg %>
+        <fieldset>
+            <legend class="text-light">Create your note hear.</legend>
+            <div class="form-group md-form">
+                <label for="listTitle" class="text-light">Please, enter name of note</label>
+                <input type="text" class="form-control" id="listTitle" name="noteTitle">
+            </div>
+            <div class="form-group">
+               
+            </div>
+				</fieldset>
+				<fieldset>
+					<legend class="text-light">Create your task hear.</legend>
+					<div class="form-group md-form d-flex align-items-center">
+                            <label for="listTitle" class="text-light">What to do </label>
+							<input id="note-descript" name="noteDescript" type="text" class="form-control main-input  ">
+					</div>
+			</fieldset> 
+			<button id="e3" type="submit"   class="btn btn-outline-light btn-sm ">Create</button>
+
+    </form>
+  
+</div>
